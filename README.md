@@ -2,13 +2,15 @@
 ## by Kazeem Fatai Oabamiji
 
 
-## Dataset
+## Data Wrangling
 
 > The Prosper loan dataset, provided by Udacity, contains loan information froom different borrowers in United States of America. These data contains about a hundred thousand rows and 81 columns. With how much the columns are, we need a specific area of interest hence, we will need to specify the columns to investigate these area of interests.
-This was done by adding the `usecols` parameter to the read_csv function. There were no duplicates in my data but it contains null values in some columns. Upon Visual assessment of my dataset in Microsoft Excel, I realised that my dataset variables has two categories which are records for data recorded after august 2009 and data recorded before 2009. ProsperScore and ProsperRating (Alpha) contain records applicable for data recorded after august 2009. 
+
+>This was done by adding the `usecols` parameter to the read_csv function. There were no duplicates in my data but it contains null values in some columns. Upon Visual assessment of my dataset in Microsoft Excel, I realised that my dataset variables has two categories which are records for data recorded after august 2009 and data recorded before 2009. ProsperScore and ProsperRating (Alpha) contain records applicable for data recorded after august 2009. 
 Upon discovering this, i wrote a code to seperate out this records for their different date range. Also, the null values in the BorrowerState, Occupation and EmploymentStatus might not pose a threat to our data analysis as they will be replace with Not available for the different variables
 And of course, null values in CurrentDeliquencies, AvailableBankCredit and TotalProsperLoans are all statistically correct as not all Borrowers have these variables recorded or available.
-Hence, i wrote a function to replace the null values with "Not Available" for all the columns in other to be able to categorize records for which i do not have their records
+
+- Hence, i wrote a function to replace the null values with "Not Available" for all the columns in other to be able to categorize records for which i do not have their records
 
 
 ## Summary of Findings
